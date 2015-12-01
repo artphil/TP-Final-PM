@@ -1,0 +1,25 @@
+package Interface;
+
+import javax.swing.*;
+
+public class JanelaCliente extends JFrame
+{
+	public JLabel texto;
+	
+	public JanelaCliente ()
+	{
+		/*Texto da barra superior*/
+		setTitle("Empresa13 Soluções em Serviços");
+		
+		/*Texto de informação*/
+		texto = new JLabel ("CLIENTE \nEscolha a opção"
+				+ " desejada para acessar o Sistema");
+		texto.setHorizontalTextPosition(SwingConstants.CENTER);
+		
+		/*Configurações da Janela*/
+		setSize(400, 200);
+		setLocationRelativeTo(null); 
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+}

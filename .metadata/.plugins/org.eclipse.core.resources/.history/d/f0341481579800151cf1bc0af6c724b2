@@ -1,0 +1,20 @@
+package Interface;
+
+import javax.swing.*;
+
+public class SelecaoUsuario extends JPanel
+{
+	JButton Cliente;
+	JButton Tecnico;
+	
+	public SelecaoUsuario ()
+	{
+		Cliente = new JButton ("Cliente");
+		add(Cliente);
+		
+		Tecnico = new JButton ("Tecnico");
+		add(Cliente);
+		
+	}
+	
+}
