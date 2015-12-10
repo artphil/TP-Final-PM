@@ -16,6 +16,7 @@ public class BotaoTecnico implements ActionListener
 	
 	public void actionPerformed(ActionEvent ev) 
 	{
+		janela.setVisible(false);
 		janela = new JanelaTecnico ();		
 	}
 

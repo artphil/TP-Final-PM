@@ -1,8 +1,6 @@
 package Interface;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.FlowLayout;
+import java.awt.*;
 
 import javax.swing.*;
 import Pessoas.*;

@@ -1,0 +1,46 @@
+package Interface;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class JanelaCliente extends JFrame
+{
+	public JLabel		texto;
+	public JPanel 		portatexto;
+	public Container	login;
+	public JTextField 	nome,
+						cpf,
+						telefone;
+			
+	
+	public JanelaCliente ()
+	{
+		/*Texto da barra superior*/
+		setTitle("Empresa13 Soluções em Serviços");
+		
+		/*Texto de informação*/
+		portatexto = new JPanel ();
+		texto = new JLabel ("CLIENTE");
+		texto.setHorizontalTextPosition(SwingConstants.CENTER);
+		portatexto.add(texto);
+		portatexto.setAlignmentX(Component.CENTER_ALIGNMENT); 
+		add(portatexto, BorderLayout.PAGE_START);
+		
+		/*Conteudo*/
+		login = new Container ();
+		login.setLayout(new GridLayout(0, 2));
+		
+		login.add(new JTextArea("Nome"));
+		
+		nome = new JTextField(20);
+		login.add(nome);
+		
+		add(login, BorderLayout.CENTER);
+
+		/*Configurações da Janela*/
+		setSize(800, 600);
+		setLocationRelativeTo(null); 
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+}

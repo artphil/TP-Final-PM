@@ -1,0 +1,31 @@
+package Sistema;
+
+import java.io.*;
+
+import javax.swing.*;
+
+import Interface.*;
+import Pessoas.*;
+import Servicos.*;
+
+public class Programa {
+	
+	private static JFrame janela;
+
+	public static void main(String[] args) throws IOException 
+	{
+		
+		
+		ListaCliente listaCliente =  new ListaCliente();
+		listaCliente.preenche();
+		ListaTecnico listaTecnico = new ListaTecnico();
+		listaTecnico.preenche();
+		
+		
+		
+		//System.out.println(lista2.toString());
+		
+//		janela = new JanelaInicio();
+	}
+
+}

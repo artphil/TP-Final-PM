@@ -1,0 +1,23 @@
+package Sistema;
+
+import java.io.*;
+
+import javax.swing.*;
+
+import Interface.*;
+import Pessoas.*;
+import Servicos.*;
+
+public class Programa {
+	
+	private static JFrame janela;
+
+	public static void main(String[] args) throws IOException 
+	{
+		FileWriter arquivoTeste = new FileWriter("clientes/teste.txt");
+		String banana = "banana";
+		arquivoTeste.write(banana, 0, 3);
+		janela = new JanelaInicio();
+	}
+
+}

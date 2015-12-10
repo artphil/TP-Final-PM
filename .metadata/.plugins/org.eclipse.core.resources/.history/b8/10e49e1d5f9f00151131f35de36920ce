@@ -1,0 +1,50 @@
+package Pessoas;
+
+public class Tecnico extends Pessoa{
+
+	private static int serial; 
+	private int matricula;
+	private String formacao;
+
+	public Tecnico ()
+	{
+		matricula = ++serial;
+	}
+	
+	public Empregado (int numero)
+	{
+		matricula = numero;
+		if (numero > serial)
+			serial = numero;
+	}
+	
+	public String getFormacao() 
+	{
+		return formacao;
+	}
+	
+	public int getMatricula() 
+	{
+		return matricula;
+	}
+	
+	public void setFormacao(String formacao) 
+	{
+		this.formacao = formacao;
+	}
+	
+	public String toString ()
+	{
+		return "Matricula:	" + matricula 
+				+ "\nNome:		" + getNome() 
+				+ "\nEmail:		" + getEmail () 
+				+ "\nEndereço:	" + getEndereco ()
+				+ "\nTelefone:	" + getTelefone () 
+				+ "\nNascimento:	" + getDataNasc ()
+				+ "\nCPF:		" + getCPF () 
+				+ "\nIdentidade:	" + getIdentidade () 
+				+ "Formação:	" + getFormacao ();
+	}
+	
+}
+
