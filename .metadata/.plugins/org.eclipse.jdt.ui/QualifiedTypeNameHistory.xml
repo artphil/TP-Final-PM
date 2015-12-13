@@ -2,8 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
-<fullyQualifiedTypeName name="java.awt.Component"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
@@ -11,14 +9,27 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="Pessoas.Cliente"/>
 <fullyQualifiedTypeName name="Pessoas.ListaTecnico"/>
 <fullyQualifiedTypeName name="javax.swing.JTextField"/>
 <fullyQualifiedTypeName name="java.awt.LayoutManager"/>
-<fullyQualifiedTypeName name="java.awt.GridLayout"/>
 <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
 <fullyQualifiedTypeName name="javax.swing.JTextPane"/>
 <fullyQualifiedTypeName name="javax.swing.JLabel"/>
 <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="Interface.JanelaInicio"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="Interface.BotaoEntra"/>
+<fullyQualifiedTypeName name="Interface.BotaoVolta"/>
+<fullyQualifiedTypeName name="Interface.BotaoEntraTecnico"/>
+<fullyQualifiedTypeName name="Interface.BotaoEntraCliente"/>
+<fullyQualifiedTypeName name="Interface.JanelaDadosCliente"/>
+<fullyQualifiedTypeName name="Interface.JanelaDadosTecnico"/>
+<fullyQualifiedTypeName name="Interface.BotaoCliente"/>
+<fullyQualifiedTypeName name="java.awt.GridLayout"/>
+<fullyQualifiedTypeName name="java.awt.Component"/>
+<fullyQualifiedTypeName name="javax.swing.SwingConstants"/>
+<fullyQualifiedTypeName name="java.awt.ComponentOrientation"/>
+<fullyQualifiedTypeName name="Pessoas.Cliente"/>
+<fullyQualifiedTypeName name="Pessoas.Tecnico"/>
 </qualifiedTypeNameHistroy>

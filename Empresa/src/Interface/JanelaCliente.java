@@ -11,12 +11,13 @@ public class JanelaCliente extends JFrame
 	public JTextField 	nome,
 						cpf,
 						telefone;
-	public JButton 		entra;
+	public JButton 		entra,
+						volta;
 	
 	public JanelaCliente ()
 	{
 		/*Texto da barra superior*/
-		setTitle("Empresa13 Soluções em Serviços");
+		setTitle("Fazconcertos Soluções em Serviços");
 		
 		/*Texto de informação*/
 		portatexto = new JPanel ();
@@ -28,7 +29,7 @@ public class JanelaCliente extends JFrame
 		
 		/*Conteudo*/
 		login = new JPanel ();
-		login.setLayout(new GridLayout(0, 1));
+		login.setLayout(new BoxLayout(login, BoxLayout.Y_AXIS));
 		
 		login.add(new JLabel("Nome"));
 		
@@ -53,10 +54,16 @@ public class JanelaCliente extends JFrame
 		
 		add(login, BorderLayout.CENTER);
 
-		entra = new JButton ("ENTRA");
-		//entra.addActionListener(new BotaoCliente(this));
 		JPanel portaBotao = new JPanel();
+		
+		entra = new JButton ("ENTRA");
+		entra.addActionListener(new BotaoEntraCliente(this));
 		portaBotao.add(entra);
+		
+		volta = new JButton ("VOLTAR");
+		volta.addActionListener(new BotaoVolta (this));
+		portaBotao.add(volta);
+		
 		add(portaBotao, BorderLayout.PAGE_END);
 		
 		/*Configurações da Janela*/

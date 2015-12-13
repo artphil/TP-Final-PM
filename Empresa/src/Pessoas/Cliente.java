@@ -1,6 +1,7 @@
 package Pessoas;
 
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa
+{
 
 	private static int serial; 
 	private int id;

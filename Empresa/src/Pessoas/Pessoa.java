@@ -3,13 +3,13 @@ package Pessoas;
 public class Pessoa {
 	
 	/* Variaveis de Campo */
-	private String nome;
-	private String endereco;
-	private String identidade;
-	private String cpf;
-	private String email;
-	private String telefone;
-	private String dataNasc;
+	private String 	nome,
+	  				endereco,
+	  				identidade,
+	  				cpf,
+	  				email,
+	  				telefone,
+	  				dataNasc;
 	
 	/* Funções Get */
 	public String getNome () 

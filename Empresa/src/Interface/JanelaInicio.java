@@ -17,7 +17,7 @@ public class JanelaInicio extends JFrame{
 	public JanelaInicio ()
 	{
 		/*Texto da barra superior*/
-		setTitle("Empresa13 Soluções em Serviços");
+		setTitle("Fazconcertos Soluções em Serviços");
 		
 		/*Texto de informação*/
 		portatexto = new JPanel ();
