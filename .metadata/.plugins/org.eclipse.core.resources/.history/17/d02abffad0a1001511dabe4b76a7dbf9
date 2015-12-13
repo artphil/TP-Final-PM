@@ -1,0 +1,25 @@
+package Interface;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import Pessoas.*;
+
+public class BotaoEntraCliente implements ActionListener
+{
+	public JFrame janela;
+	public Cliente cliente;
+	
+	public BotaoEntraCliente (JFrame janela)
+	{
+		this.janela = janela;
+	}
+	
+	public void actionPerformed(ActionEvent ev) 
+	{
+		janela.setVisible(false);
+		janela = new JanelaDadosCliente (new Cliente ());	
+	}
+
+}

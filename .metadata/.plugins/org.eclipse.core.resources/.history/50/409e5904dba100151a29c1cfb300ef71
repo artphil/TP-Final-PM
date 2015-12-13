@@ -1,0 +1,19 @@
+package Interface;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import Pessoas.*;
+import Sistema.Gerenciador;
+
+public class BotaoEntraTecnico implements ActionListener
+{
+	public Tecnico tecnico;
+	
+	public void actionPerformed(ActionEvent ev) 
+	{
+		Gerenciador.janelas[Gerenciador.index].setVisible(false);
+		Gerenciador.janelas[++Gerenciador.index] = new JanelaDadosTecnico (new Tecnico());	
+	}
+}

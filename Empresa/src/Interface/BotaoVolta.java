@@ -2,22 +2,15 @@ package Interface;
 
 import java.awt.event.*;
 
-import javax.swing.JFrame;
+import Sistema.Gerenciador;
 
 public class BotaoVolta  implements ActionListener
 {
 	
-public JFrame janela;
-	
-	public BotaoVolta (JFrame janela)
-	{
-		this.janela = janela;
-	}
-	
 	public void actionPerformed(ActionEvent ev) 
 	{
-		janela.setVisible(false);
-		janela = new JanelaInicio ();		
+		Gerenciador.janelas[Gerenciador.index].setVisible(false);
+		Gerenciador.janelas[--Gerenciador.index].setVisible(true);
 	}
 
 }

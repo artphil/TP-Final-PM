@@ -1,0 +1,20 @@
+package Interface;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import Pessoas.*;
+import Sistema.Gerenciador;
+
+public class BotaoEntraCliente implements ActionListener
+{
+	public Cliente cliente;
+	
+	public void actionPerformed(ActionEvent ev) 
+	{
+		Gerenciador.janelas[Gerenciador.index].setVisible(false);
+		Gerenciador.janelas[++Gerenciador.index] = new JanelaDadosCliente (new Cliente ());	
+	}
+
+}

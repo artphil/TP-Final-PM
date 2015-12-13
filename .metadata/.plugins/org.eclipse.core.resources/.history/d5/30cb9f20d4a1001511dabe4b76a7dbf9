@@ -1,0 +1,23 @@
+package Interface;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import Pessoas.*;
+import Sistema.Gerenciador;
+
+public class BotaoEntra<P> implements ActionListener
+{
+	public P pessoa;
+	
+	public void actionPerformed(ActionEvent ev) 
+	{
+		Gerenciador.janelas[Gerenciador.index].setVisible(false);
+		if (pessoa == Cliente.class)		
+			Gerenciador.janelas[++Gerenciador.index] = new JanelaDadosCliente((Cliente) pessoa);	
+		else if (pessoa == Tecnico.class)
+			Gerenciador.janelas[++Gerenciador.index] = new JanelaDadosTecnico((Tecnico) pessoa);	
+	}
+
+}

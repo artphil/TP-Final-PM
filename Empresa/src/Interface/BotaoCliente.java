@@ -3,19 +3,15 @@ package Interface;
 import java.awt.event.*;
 import javax.swing.*;
 
+import Sistema.Gerenciador;
+
 public class BotaoCliente implements ActionListener
 {
-	public JFrame janela;
-	
-	public BotaoCliente (JFrame janela)
-	{
-		this.janela = janela;
-	}
 	
 	public void actionPerformed(ActionEvent ev) 
 	{
-		janela.setVisible(false);
-		janela = new JanelaCliente ();		
+		Gerenciador.janelas[Gerenciador.index].setVisible(false);
+		Gerenciador.janelas[++Gerenciador.index] = new JanelaCliente ();		
 	}
 
 }

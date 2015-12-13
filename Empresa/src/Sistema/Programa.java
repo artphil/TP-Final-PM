@@ -10,25 +10,23 @@ import Servicos.*;
 
 public class Programa {
 	
-	static JFrame janela;
-	static ListaCliente listaCliente;
-	static ListaTecnico listaTecnico;
-
+	static Gerenciador sistema;
+	
 	public static void main(String[] args) throws IOException 
 	{
 		
+		sistema = new Gerenciador();
 		
-		listaCliente =  new ListaCliente();
-		listaCliente.preenche();
-		listaTecnico = new ListaTecnico();
-		listaTecnico.preenche();
+		sistema.listaCliente =  new ListaCliente();
+		sistema.listaCliente.preenche();
+		sistema.listaTecnico = new ListaTecnico();
+		sistema.listaTecnico.preenche();
 		
+		System.out.println(sistema.listaCliente.toString());
+		System.out.println(sistema.listaTecnico.toString());
 		
+		sistema.janelas[Gerenciador.index] = new JanelaInicio();
 		
-		
-		System.out.println(listaCliente.toString());
-		
-		janela = new JanelaInicio();
 	}
 
 }

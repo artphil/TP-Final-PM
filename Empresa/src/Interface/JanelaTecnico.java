@@ -3,6 +3,8 @@ package Interface;
 import java.awt.*;
 import javax.swing.*;
 
+import Pessoas.*;
+
 
 public class JanelaTecnico extends JFrame
 {
@@ -47,7 +49,7 @@ public class JanelaTecnico extends JFrame
 		portaBotao.add(entra);
 		
 		volta = new JButton ("VOLTAR");
-		volta.addActionListener(new BotaoVolta(this));
+		volta.addActionListener(new BotaoVolta());
 		portaBotao.add(volta);
 		
 		add(portaBotao, BorderLayout.PAGE_END);

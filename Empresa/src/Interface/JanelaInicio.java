@@ -3,11 +3,10 @@ package Interface;
 import java.awt.*;
 
 import javax.swing.*;
-import Pessoas.*;
-import Servicos.*;
+import Sistema.*;
 
-public class JanelaInicio extends JFrame{
-
+public class JanelaInicio extends JFrame
+{
 	public JPanel portatexto;
 	public JLabel texto;
 	public JPanel botoes;
@@ -31,11 +30,11 @@ public class JanelaInicio extends JFrame{
 		botoes = new JPanel ();
 		
 		cliente = new JButton ("Cliente");
-		cliente.addActionListener(new BotaoCliente(this));
+		cliente.addActionListener(new BotaoCliente());
 		botoes.add(cliente);
 		
 		tecnico = new JButton ("Tecnico");
-		tecnico.addActionListener(new BotaoTecnico(this));
+		tecnico.addActionListener(new BotaoTecnico());
 		botoes.add(tecnico);
 		
 		add(botoes, BorderLayout.CENTER);

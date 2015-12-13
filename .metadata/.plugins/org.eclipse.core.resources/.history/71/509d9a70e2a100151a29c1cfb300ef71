@@ -1,0 +1,32 @@
+package Interface;
+
+import java.awt.event.*;
+
+import Pessoas.Cliente;
+import Sistema.Gerenciador;
+
+public class BotaoConfirmaCliente implements ActionListener
+{
+	JanelaCadastroCliente janela;
+	Cliente cliente;
+	
+	public BotaoConfirmaCliente (JanelaCadastroCliente janela)
+	{
+		this.janela = janela;
+	}
+	
+	public void actionPerformed(ActionEvent ev) {
+		cliente = new Cliente();
+		cliente.setNome(janela.nome.getText());
+		cliente.setCPF(janela.cpf.getText());
+		cliente.setDataNasc(janela.dataNasc.getText());
+		cliente.setEmail(janela.email.getText());
+		cliente.setEndereco(janela.endereco.getText());
+		cliente.setIdentidade(janela.identidade.getText());
+		cliente.setTelefone(janela.telefone.getText());
+		
+		Gerenciador.listaCliente.add(cliente);
+	}
+
+	
+}

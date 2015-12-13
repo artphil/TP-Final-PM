@@ -1,0 +1,38 @@
+package Interface;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import Pessoas.*;
+import Sistema.Gerenciador;
+
+public class BotaoEntraCliente implements ActionListener
+{
+	public Cliente cliente;
+	JanelaCliente janela;
+	
+	public BotaoEntraCliente (JanelaCliente janela)
+	{
+		//janela = (JanelaCliente) Gerenciador.janelas[Gerenciador.index];
+		this.janela = janela;
+		System.out.println(janela.nome.getText() + "\n"+ janela.cpf.getText()+"\n"+ janela.telefone.getText());
+	}
+	
+	public void actionPerformed(ActionEvent ev) 
+	{
+		System.out.println(janela.nome.getText()+ "\n"+ janela.cpf.getText()+"\n"+ janela.telefone.getText());
+		cliente = Gerenciador.listaCliente.Busca(janela.nome.getText(), janela.cpf.getText(), janela.telefone.getText());
+		
+		if (cliente != null)
+		{
+			Gerenciador.janelas[Gerenciador.index].setVisible(false);
+			Gerenciador.janelas[++Gerenciador.index] = new JanelaDadosCliente(cliente);	
+		}
+		else
+		{
+			JOptionPane oi = new JOptionPane();
+		}
+	}
+
+}
