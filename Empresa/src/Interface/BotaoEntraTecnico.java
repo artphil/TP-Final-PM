@@ -4,6 +4,7 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
+import Excecoes.blankFieldsException;
 import Pessoas.*;
 import Sistema.Gerenciador;
 
@@ -17,7 +18,14 @@ public class BotaoEntraTecnico implements ActionListener
 		this.janela = janela;
 	}
 	public void actionPerformed(ActionEvent ev) 
-	{
+	{	
+		try{
+			validaLogin();
+		}catch(blankFieldsException e){
+			JOptionPane.showMessageDialog(null, e.getMessage());
+			return;
+		}
+		
 		tecnico = Gerenciador.listaTecnico.Busca(Integer.parseInt(janela.matricula.getText()));
 		
 		if (tecnico != null)
@@ -27,10 +35,21 @@ public class BotaoEntraTecnico implements ActionListener
 		}
 		else
 		{
-			int dialogButton = JOptionPane.YES_NO_OPTION;
-            JOptionPane.showConfirmDialog (null, "Would You Like to Save your Previous Note First?","Warning",dialogButton);
-
-            if(dialogButton == JOptionPane.YES_OPTION){ }
+			int dialogButton = JOptionPane.showConfirmDialog(null, "Usuario nao cadastro \ndeseja cadastrar agora?");
+			
+			if(dialogButton == 0){
+				new JanelaCadastroTecnico();
+			}
+			else{
+				return;
+			}
+		}
+	}
+	
+	public void validaLogin() throws blankFieldsException{
+		
+		if(janela.matricula.getText().isEmpty()){
+			throw new blankFieldsException("Favor preencher todos os campos solicitados.");
 		}
 	}
 }

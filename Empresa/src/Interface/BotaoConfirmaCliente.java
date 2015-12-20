@@ -2,6 +2,10 @@ package Interface;
 
 import java.awt.event.*;
 
+import javax.swing.JOptionPane;
+
+import Excecoes.*;
+
 import Pessoas.Cliente;
 import Sistema.Gerenciador;
 
@@ -16,6 +20,13 @@ public class BotaoConfirmaCliente implements ActionListener
 	}
 	
 	public void actionPerformed(ActionEvent ev) {
+		try{
+			validaCadastro();
+		}catch(blankFieldsException e){
+			JOptionPane.showMessageDialog(null, e.getMessage());
+			return;
+		}
+		
 		cliente = new Cliente();
 		cliente.setNome(janela.nome.getText());
 		cliente.setCPF(janela.cpf.getText());
@@ -30,5 +41,17 @@ public class BotaoConfirmaCliente implements ActionListener
 		janela.setVisible(false);
 	}
 
+	public void validaCadastro() throws blankFieldsException{
+		if(janela.nome.getText().isEmpty() ||
+		   janela.dataNasc.getText().isEmpty() ||
+		   janela.email.getText().isEmpty() ||
+		   janela.cpf.getText().isEmpty() ||
+		   janela.endereco.getText().isEmpty() ||
+		   janela.identidade.getText().isEmpty() ||
+		   janela.telefone.getText().isEmpty()){
+			throw new blankFieldsException("Favor preencher todos os campos solicitados.");
+		}
+			
+	}
 	
 }

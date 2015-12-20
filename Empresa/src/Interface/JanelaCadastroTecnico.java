@@ -24,11 +24,11 @@ public class JanelaCadastroTecnico extends JFrame
 	public JanelaCadastroTecnico ()
 	{
 		/*Texto da barra superior*/
-		setTitle("Fazconcertos Soluções em Serviços");
+		setTitle("Fazconcertos Soluï¿½ï¿½es em Serviï¿½os");
 		
-		/*Texto de informação*/
+		/*Texto de informaï¿½ï¿½o*/
 		portatexto = new JPanel ();
-		texto = new JLabel ("CLIENTE");
+		texto = new JLabel ("TECNICO");
 		portatexto.add(texto);
 		add(portatexto, BorderLayout.PAGE_START);
 
@@ -107,7 +107,7 @@ public class JanelaCadastroTecnico extends JFrame
 		
 		add(conteudo, BorderLayout.CENTER);
 		
-		/*Botões de ação*/
+		/*Botï¿½es de aï¿½ï¿½o*/
 		botoes = new JPanel ();
 		
 		confirma = new JButton ("Confirma");
@@ -121,7 +121,7 @@ public class JanelaCadastroTecnico extends JFrame
 		add(botoes, BorderLayout.PAGE_END);
 		
 
-		/*Configurações da Janela*/
+		/*Configuraï¿½ï¿½es da Janela*/
 		setSize(470, 600);
 		setLocationRelativeTo(null); 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);

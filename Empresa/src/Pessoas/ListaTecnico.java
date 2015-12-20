@@ -1,4 +1,4 @@
-package Pessoas;
+	package Pessoas;
 
 import java.io.*;
 import java.util.*;
@@ -214,7 +214,7 @@ public class ListaTecnico {
 			} while (eof != -1); 
 			arquivoTecnicos.close(); 
 		} catch (IOException e) {
-			System.out.println( "erro – arquivo não encontrado:" + e.toString());
+			System.out.println( "erro ï¿½ arquivo nï¿½o encontrado:" + e.toString());
 		}
 		
 		arquivoTecnicos.close();
